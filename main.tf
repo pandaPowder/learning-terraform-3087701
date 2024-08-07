@@ -39,9 +39,9 @@ module "autoscaling" {
   version = "7.7.0"
   # insert the 1 required variable here
 
-  name "blog"
-  min_size = 1
-  max_size = 2
+  name      = "blog"
+  min_size  = 1
+  max_size  = 2
 
   vpc_zone_identifier = module.blog_vpc.public_subnets
   target_group_arns   = madule.blog_alb.target_group_arns
